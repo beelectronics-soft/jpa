@@ -25,8 +25,8 @@ public class ProductDAO extends BaseController
         getEM().getTransaction().begin();
         
         getEM().merge(product);
-        getEM().persist(product);
-        getEM().remove(product);
+        // getEM().persist(product);    This is for insert method
+        // getEM().remove(product);     This is for delete method
         
         getEM().getTransaction().commit();
         getEM().close();
